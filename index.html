@@ -11,11 +11,112 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
 
-    <title>Robô espacial</title>
+    <title>Espacial</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <!-- header -->
+    <header class="header">
+        <div class="header__group">
+            <img src="assets/icons/space-robot.png" alt="Logo" class="header__logo">
+
+            <h1 class="header__title title--small">
+                Espacial
+            </h1>
+        </div>
+
+        <!-- menu navigation -->
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li class="header__item">
+                    <a href="#home" class="header__link link--default">
+                        Página inicial
+                    </a>
+                </li>
+
+                <li class="header__item">
+                    <a href="#about" class="header__link link--default">
+                        Sobre
+                    </a>
+                </li>
+
+                <li class="header__item">
+                    <a href="#highlihts" class="header__link link--default">
+                        Destaques
+                    </a>
+                </li>
+
+                <li class="header__item">
+                    <a href="#contact" class="header__link link--default">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- open sidebar button -->
+        <button class="header__btn" aria-label="Abrir menu">
+            <img src="assets/icons/menu.png" alt="Abrir menu" class="header__icon">
+        </button>
+    </header>
+
+    <!-- sidebar -->
+    <div class="sidebar" aria-label="Menu lateral">
+        <div class="sidebar__header">
+            <div class="sidebar__group">
+                <img src="assets/icons/space-robot.png" alt="Logo" class="sidebar__logo">
+
+                <h1 class="sidebar__title title--small">
+                    Espacial
+                </h1>
+            </div>
+
+            <!-- close sidebar button -->
+            <button class="sidebar__btn" aria-label="Fechar menu">
+                <img src="assets/icons/close.png" alt="Fechar menu" class="sidebar__icon">
+            </button>
+        </div>
+
+        <nav class="sidebar__menu">
+            <ul class="sidebar__item">
+                <a href="#home" class="sidebar__link link--default">
+                    Início
+                </a>
+            </ul>
+
+            <ul class="sidebar__item">
+                <a href="#about" class="sidebar__link link--default">
+                    Sobre
+                </a>
+            </ul>
+
+            <ul class="sidebar__item">
+                <a href="#highlights" class="sidebar__link link--default">
+                    Destaques
+                </a>
+            </ul>
+
+            <ul class="sidebar__item">
+                <a href="#contact" class="sidebar__link link--default">
+                    Contactos
+                </a>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- close sidebar, when user clicks outside of it -->
+    <div class="overlay"></div>
+
+    <!-- main-content -->
+    <main class="main-content">
+        Conteúdo principal
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        Rodapé
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
