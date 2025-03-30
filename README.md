@@ -1,3 +1,3 @@
-# Robô espacial "Leading page"
+# Robô espacial "Single page"
 
-## Exemplo de leading page com HTML, CSS e Javascript
+## Exemplo de sigle page com HTML, CSS e Javascript
