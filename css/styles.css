@@ -59,7 +59,6 @@ body {
     height: 100vh;
     width: 0;
     overflow: hidden;
-    background-color: #fff;
     box-shadow: 0 0 0.1rem 0.1rem rgba(0, 0, 0, 0.2);
 }
 
@@ -131,7 +130,8 @@ body {
 .sidebar__title,
 .home__title,
 .author__title,
-.author__text {
+.author__text,
+.highlight__title {
     color: var(--semi-dark-color);
 }
 
@@ -154,12 +154,12 @@ body {
 
 .sidebar__menu {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem 0;
-    padding-left: 1rem;
-    padding-top: 1rem;
-    border-top: 0.2rem solid var(--tertirary-color);
+    padding: 1rem;
+}
+
+.sidebar__menu,
+.highlight {
+    border-top: 0.1rem solid #ddd;
 }
 
 .bg-image {
@@ -197,7 +197,8 @@ body {
 
 .home__text,
 .author__text,
-.author__figcaption {
+.author__figcaption,
+.card__text {
     line-height: 1.8;
     max-width: 32rem;
 }
@@ -208,17 +209,29 @@ body {
 
 /* about components */
 
+.sidebar,
 .character,
-.author__figure {
+.author__figure,
+.card {
     background-color: #fff;
 }
 
-.character__menu {
+.sidebar__menu,
+.character__menu,
+.author {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
     gap: 2rem;
+}
+
+.character__menu,
+.author {
+    align-items: center;
+}
+
+
+.character__menu {
+    flex-wrap: wrap;
 }
 
 .character__item {
@@ -240,20 +253,21 @@ body {
 /* author components */
 
 .author {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.75rem;
     margin-top: 4rem;
 }
 
 .author,
-.author__figcaption {
+.author__figcaption,
+.highlight {
     padding: 1.5rem;
 }
 
 .author__figure {
     border-radius: 1.25rem;
+}
+
+.author__figure,
+.card {
     box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.2);
 }
 
@@ -267,6 +281,52 @@ body {
     width: 100%;
     border-radius: 1.25rem 1.25rem 0 0;
     transition: transform 250ms ease-in-out;
+}
+
+.highlight {
+    margin: 2rem 0;
+}
+
+.grid {
+    /*
+        auto-fit does the columns grow to avalable space.
+        minmax does each column is limited 14rem to 28rem.
+    */
+    --rcolumns: repeat(auto-fit, minmax(14rem, 28rem));
+
+    display: grid;
+    grid-template-columns: var(--rcolumns);
+    justify-content: center;
+    gap: 2rem;
+}
+
+.highlight__title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.card,
+.card__body {
+    padding: 0.75rem;
+}
+
+.card {
+    border-radius: 0.75rem;
+}
+
+.card__image {
+    height: 6rem;
+    width: 6rem;
+}
+
+.card__title {
+    margin: 1rem 0;
+}
+
+.card__btn {
+    display: block;
+    margin: 2rem auto 1rem auto;
+    width: 50%;
 }
 
 /* modifiers */
@@ -309,12 +369,13 @@ body {
 }
 
 .btn--sm {
-    font-size: x-small;
+    font-size: smaller;
+    font-weight: 500;
     padding: 1rem;
 }
 
 .btn--large {
-    font-weight: bold;
+    font-weight: 700;
     padding: 1rem 2rem;
 }
 
@@ -343,11 +404,11 @@ body {
 .btn--tertiary {
     color: var(--semi-dark-color);
     background-color: var(--tertirary-color);
-    border: 0.1rem solid var(--semi-dark-color);
+    border: 0.1rem solid #ddd;
 }
 
 .btn--tertiary:hover {
-    background-color: #f2f0eb;
+    background-color: #ddd;
 }
 
 .btn--tertiary:focus {
@@ -401,6 +462,12 @@ body {
         flex-direction: row;
         justify-content: space-evenly;
         padding: 1.75rem;
+    }
+
+    /* highlight components */
+    .card__btn {
+        width: fit-content;
+        margin: 2rem 0 1rem 0;
     }
 
     /* modifiers */
