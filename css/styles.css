@@ -315,8 +315,8 @@ body {
 }
 
 .card__image {
-    height: 6rem;
-    width: 6rem;
+    height: 5rem;
+    width: 5rem;
 }
 
 .card__title {
@@ -329,35 +329,61 @@ body {
     width: 50%;
 }
 
+/* footer components */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(720px * 0.25);
+    margin-top: 2rem;
+    background-color: var(--tertirary-color);
+    background-image: url("../images/space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.footer__copy {
+    color: #fff;
+    font-weight: 600;
+}
+
 /* modifiers */
 
-.title--small {
+.title--sm {
     font-weight: 800;
     font-size: small;
 }
 
-.title--xx-large {
-    font-weight: 900;
-    font-size: xx-large;
+.title--lg {
+    font-weight: 500;
+    font-size: larger;
 }
 
-.title--x-large {
+.title--x-lg {
     font-weight: 700;
     font-size: x-large;
 }
 
-.text--small {
+.title--xx-lg {
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+
+.text--sm {
     font-size: small;
 }
 
-.link--default {
+.link--def {
     cursor: none;
     position: relative;
     text-decoration: none;
     padding-bottom: 0.25rem;
 }
 
-.link--default:hover::after {
+.link--def:hover::after {
     content: '';
     position: absolute;
     left: 0;
@@ -374,7 +400,7 @@ body {
     padding: 1rem;
 }
 
-.btn--large {
+.btn--lg {
     font-weight: 700;
     padding: 1rem 2rem;
 }
@@ -465,6 +491,7 @@ body {
     }
 
     /* highlight components */
+
     .card__btn {
         width: fit-content;
         margin: 2rem 0 1rem 0;
@@ -472,7 +499,7 @@ body {
 
     /* modifiers */
 
-    .link--default {
+    .link--def {
         cursor: pointer;
     }
 
